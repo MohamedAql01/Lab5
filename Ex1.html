@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type = "password" id="pass1" placeholder = "Enter password">
+        <input type = "password" id="pass2" placeholder = "Re-enter password">
+        <button onclick="validate()">Validate</button>
+    </body>
+        <script>
+            function validate() 
+            {
+                const pass1 = document.getElementById("pass1").value;
+                const pass2 = document.getElementById("pass2").value;
+
+                if(pass1.length < 8 | pass2.length < 8) 
+                {
+                    alert("Password is not long enough");
+                } 
+                else if(pass1 != pass2) 
+                {
+                    alert("Passwords do not match");
+                } 
+                else 
+                {
+                    alert("Passwords match!")
+                }
+            }
+            
+        </script>
+</html>

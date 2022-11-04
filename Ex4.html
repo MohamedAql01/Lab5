@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #paragraph
+        {
+            border-style: solid;
+        }
+    </style>
+    <body>
+        <p>The units for the colors goes from 00-FF or 0-255:</p>
+        <p>Red border value <input type = "text" id = "border1"></p>
+        <p>Green border value <input type = "text" id = "border2"></p>
+        <p>Blue border value <input type = "text" id = "border3"></p>
+        <p>Border width <input type = "text" id = "width"></p>
+        <p>Red background value <input type = "text" id = "background1"></p>
+        <p>Green background value <input type = "text" id = "background2"></p>
+        <p>Blue background value <input type = "text" id = " background3"></p>
+        <div id = "paragraph">Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text </div>
+        <p><button onclick= "changeColor()">Click to change text!</button></p>
+    </body>
+    <script>
+        function changeColor()
+        {
+            let border1 = document.getElementById("border1").value;
+            let border2 = document.getElementById("border2").value;
+            let border3 = document.getElementById("border3").value;
+            /*
+            let width = document.getElementById("width").value;
+            
+            let background1 = document.getElementById("background1").value;
+            let background2 = document.getElementById("background2").value;
+            let background3 = document.getElementById("background3").value;
+            */
+            document.getElementById("paragraph").style.borderColor = `RGB(${border1}, ${border2}, ${border3})`;
+            document.getElementById("paragraph").style.borderWidth = `${width}`;
+            document.getElementById("paragraph").style.backgroundColor = `RGB(${background1}, ${background2}, ${background3})`;
+        }
+    </script>
+</html>

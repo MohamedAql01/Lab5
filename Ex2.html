@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="Image.jpeg" width = "500" height ="500">
+</div>
+
+<div class="mySlides fade">
+  <img src="Image - Copy.jpeg" width = "500" height ="500">
+</div>
+
+<div class="mySlides fade">
+  <img src="Image - Copy (2).jpeg" width = "500" height ="500">
+</div>
+
+<div class="mySlides fade">
+    <img src="Image - Copy (3).jpeg" width = "500" height ="500">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Image - Copy (4).jpeg" width = "500" height ="500">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Image - Copy (5).jpeg" width = "500" height ="500">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Image - Copy (6).jpeg" width = "500" height ="500">
+  </div>
+
+    <button onclick="plusSlides(-1)" onclick = "playMusic()">Previous</button>
+    <button  onclick="plusSlides(1)" onclick = "playMusic()">Next</button>
+
+
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) 
+  {
+    slides[i].style.display = "none";  
+  }
+  
+  slides[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
